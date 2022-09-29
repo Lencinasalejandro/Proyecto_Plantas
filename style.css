@@ -19,8 +19,8 @@ body{
 /* grilla del main */
 .grid{
     display: grid;
-    grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr;
-    grid-auto-rows: min-content ;/* [r1]auto [r2]auto [r3]auto [r4]auto [r5]auto[r6]auto [r7]auto [r8] auto;*/
+    grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr [c5];
+    grid-auto-rows: min-content ;
     grid-gap:30px;
     margin: 30px 60px;    /*margen del main 30px respecto del header/footer 60px del lateral de la pantalla*/
 }
@@ -251,7 +251,7 @@ footer .texto{
 
 /**********************************************************LISTADO********************************************************/
 
-.articulo-listado{
+.article-listado{
     text-align: justify;
 }
 
@@ -266,30 +266,26 @@ footer .texto{
 
 /* Bloque con texto a la izquierda e imagen a la derecha */
 .listado-izq{
-    grid-column-start: c1;
-    grid-column-end: c3;
+    grid-column-start: span 2; /*c1;
+    grid-column-end: c3;*/
     display: grid;
     grid-column-gap: 20px;          /* separacion entre texto e imagen */ 
     grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
     grid-auto-rows: auto;           /* el contenido se ajusta al alto de la fila */
     padding: 10px;
-    border:#1bca32 solid;
+    border:#b265d6 solid;
 }
 
 /* Bloque con texto a la derecha e imagen a la izquierda */
 .listado-der{
-    grid-column-start: c3;
-    grid-column-end: c5;
+    grid-column-start: span 2;/*c3;
+    grid-column-end: c5;*/
     display: grid;
     grid-column-gap: 20px;          /* separacion entre texto e imagen */ 
     grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
     grid-auto-rows: auto;           /* el contenido se ajusta al alto de la fila */
     padding: 10px;
-    border:#1bca32 solid;
-}
-
-.article-listado{
-    text-align: justify;
+    border:#b265d6 solid;
 }
 
 .img-listado{
@@ -300,47 +296,120 @@ footer .texto{
 
 /*****************************************************CONTACTO************************************************************/
 
-.titulo-contacto{
-    grid-column-start: c1;
-    grid-column-end: c5;
+.grid-contacto{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: min-content ;
+    grid-gap:30px;
+    margin: 30px 60px;    /*margen del main 30px respecto del header/footer 60px del lateral de la pantalla*/
+}
+.titulo-pagina-contacto{
+    color: #01140a;
+    font-family: Productsans;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    grid-column-start: span 4;
+}
+
+.parrafo-contacto{
+    grid-column-start: span 3;
+    color: #01140a;
+    font-family: roboto;
+    font-size: 25px;
     font-family: productsans;
     text-align: center;
 }
 
-.img-logo-contacto{
-    width: 30px;
-    height: 30px;
+.informacion-contacto{
+    grid-row-start: span 4;
+    border: #003d1c solid;
+    border-radius: 10px;
+}
+
+.informacion-contacto li{
+    list-style-type: none;
+    list-style-position: outside;
 }
 .formulario{
-    grid-column-start: 1;
-    grid-column-end: 9;
-    grid-row-start: 2;
-    grid-row-end: 8;
-    display: flex;
-    flex-direction: column;
+    grid-column-start: span 3 ;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 15px;
+    color: #01140a;
     font-family: productsans;
     font-size: 20px;
-    color: #01140a;
+}
+
+.block{
+    grid-column-start: span 2;
+    /*text-align: center;*/
+}
+
+label{
+    display: block;
+}
+
+.formulario button{
+    font-family: Productsans;
+    font-size: 15px;
+    background-color:#b265d6;
+    color:#01140a;
+    padding: 0 25px;
+    min-width: 50%;
+
+}
+
+.icono-contacto{
+    width: 25px;
 }
 
 /***************************************************INDEX*************************************************************/
 
-.titulo-index{
-    grid-column-start: c1;
-    grid-column-end: c5;
-    text-align: center;
-    margin-top: 20px;
-}
 
-.titulo-index p{
-    font-size: 20px;
-    margin: 0 10%;
-    text-align: justify;
-}
 
 /*******************************************************MEDIA QUERY***************************************************/
-
 @media (max-width: 1024px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-auto-rows: min-content;
+        grid-gap:30px;
+        margin: 30px 60px;    /*margen del main 30px respecto del header/footer 60px del lateral de la pantalla*/
+    }
+
+    .titulo-pagina{
+        color: #01140a;
+        font-family: Productsans;
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+        /*grid-column-start: span 2;*/
+    }
+    
+    /* Bloque con texto a la izquierda e imagen a la derecha */
+    .listado-izq{
+        /*grid-column-start: span 2; /*c1;
+        grid-column-end: c3;*/
+        display: grid;
+        grid-column-gap: 20px;          /* separacion entre texto e imagen */ 
+        grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+        grid-auto-rows: auto;           /* el contenido se ajusta al alto de la fila */
+        padding: 10px;
+        border:#1bca32 solid;
+    }
+    
+    /* Bloque con texto a la derecha e imagen a la izquierda */
+    .listado-der{
+        /*grid-column-start: span 2;/*c3;
+        grid-column-end: c5;*/
+        display: grid;
+        grid-column-gap: 20px;          /* separacion entre texto e imagen */ 
+        grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
+        grid-auto-rows: auto;           /* el contenido se ajusta al alto de la fila */
+        padding: 10px;
+        border:#1bca32 solid;
+    }
     /*{
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
