@@ -6,7 +6,7 @@
 }
 
 body{
-    font-family: Roboto;
+    font-family: Productsans;
     font-size: 15px;
     margin: 0;
     min-height: 100vh; /*Se estira al maximo del alto de la pantalla (100% view height)*/
@@ -296,13 +296,6 @@ footer .texto{
 
 /*****************************************************CONTACTO************************************************************/
 
-.grid-contacto{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-auto-rows: min-content ;
-    grid-gap:30px;
-    margin: 30px 60px;    /*margen del main 30px respecto del header/footer 60px del lateral de la pantalla*/
-}
 .titulo-pagina-contacto{
     color: #01140a;
     font-family: Productsans;
@@ -315,21 +308,31 @@ footer .texto{
 .parrafo-contacto{
     grid-column-start: span 3;
     color: #01140a;
-    font-family: roboto;
     font-size: 25px;
     font-family: productsans;
     text-align: center;
 }
 
 .informacion-contacto{
-    grid-row-start: span 4;
-    border: #003d1c solid;
-    border-radius: 10px;
+    border:#b265d6 solid;
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.informacion-contacto ul{
+    list-style-type: none;
+    list-style-position: outside;
+    justify-content: center;
+    align-items: center;
 }
 
 .informacion-contacto li{
-    list-style-type: none;
-    list-style-position: outside;
+    display: flex;
+    align-content: center;
 }
 .formulario{
     grid-column-start: span 3 ;
@@ -352,16 +355,22 @@ label{
 
 .formulario button{
     font-family: Productsans;
-    font-size: 15px;
+    font-size: 0.8em;
+    font-weight: bold;
     background-color:#b265d6;
     color:#01140a;
-    padding: 0 25px;
+    padding: 0 1.5em;
     min-width: 50%;
+    border-radius: 1em;
 
 }
 
 .icono-contacto{
-    width: 25px;
+    width: 1.3em;
+}
+
+#message{
+    width: 100%;
 }
 
 /***************************************************INDEX*************************************************************/
