@@ -35,9 +35,23 @@ body{
     grid-column-start: c1;
     grid-column-end: c5;
 }
-
+h2{
+    color: #01140a;
+    font-family: Productsans;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    grid-column-start: c1;
+    grid-column-end: c5;
+}
 /* H3 titulo de cada seccion */
 .titulo-section{
+    color: #01140a;
+    font-size: 25px;
+    font-family: Productsans;
+    text-align: center;
+}
+h3{
     color: #01140a;
     font-size: 25px;
     font-family: Productsans;
@@ -57,10 +71,6 @@ body{
 .contenedor-nav{
     font-family: Roboto;
     background-color: #ededed;
-
-    /*https://freshman.tech/flexbox-navbar/*/
-    /*https://dev.to/jungjungie/create-a-navbar-with-css-flexbox-2leh*/
-    /*https://coder-coder.com/responsive-navigation-bar-flexbox-vs-css-grid/*/
 }
 .contenedor-nav ul{
     display: flex;
@@ -126,7 +136,7 @@ body{
     text-decoration: none;
 }
 header img{
-    height: 80px;
+    height: 50px;
     /*width: 80px;*/
     align-items: center;
 }
@@ -374,6 +384,64 @@ label{
 }
 
 /***************************************************INDEX*************************************************************/
+/* grilla del main */
+.grid-index{
+    display: grid;
+    grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr;
+    grid-template-rows: [r1]auto [r2]auto [r3]auto;/* [r4]auto; /*[r5]auto[r6]auto [r7]auto [r8] auto;*/
+    grid-gap:30px;
+    /*margin: 30px 60px; */   /*margen del main 30px respecto del header/footer 60px del lateral de la pantalla*/
+}
+.section-index{
+    color:#ededed;
+    background-image: url("Imagenes plantas/garden1.png");
+    grid-column-start: c1;
+    grid-column-end: c5;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    text-align: justify;
+}
+.section-index .titulo-index{ /*es un h2 pero blanco*/
+    margin: 30px 60px;
+    font-family: Productsans;
+    font-size: 60px;
+    font-weight: bold;
+    text-align: center;
+    grid-column-start: c1;
+    grid-column-end: c5; 
+    color:#ededed;
+}
+.section-index article{
+    margin: 30px 60px;
+    padding: 10px;
+}
+.section-mas-votada{
+    grid-column-start: c2;
+    grid-column-end: c4;
+    grid-row-start: r2;
+    /*grid-row-end: r3;*/
+    font-family: Productsans;
+    border:5px solid #003d1c;
+    padding: 20px;
+}
+.section-mas-votada img{
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+}
+.section-mas-votada article p {
+    padding: 10px;
+}
+.section-mas-votada article a {
+    border: #003d1c solid 3px;
+    color: #01140a;
+    font-weight: bold;
+    padding: 5px;
+   text-decoration: none;
+   position: relative;
+   left:500px;
+}
 
 
 
