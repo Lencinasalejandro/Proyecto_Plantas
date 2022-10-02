@@ -67,6 +67,7 @@ h3{
     flex-wrap: wrap;
     background-color: #ededed;
     justify-items: start;
+    padding: 5px;
 }
 .contenedor-nav{
     font-family: Roboto;
@@ -160,7 +161,7 @@ h1{
     grid-column-start: c1;
     grid-column-end: c3;
     grid-template-columns: [c1] 1fr [c2] 1fr [c3] ;
-    border:5px solid #794592;
+    border:5px solid #b265d6;
     padding: 20px;
 }
 .section-grid2{
@@ -169,7 +170,7 @@ h1{
     grid-column-start: c3;
     grid-column-end: c5;
     grid-template-columns: [c1] 1fr [c2] 1fr [c3];
-    border:5px solid #003d1c;
+    border:5px solid #b265d6;
     padding: 20px;
 }
 .article-left{
@@ -208,11 +209,9 @@ h1{
     object-fit: cover;
 }
 .section-grid1 .article-left h2{
-    color:#003d1c;
-    padding-left: 10px;
+      padding-left: 10px;
 }
 .section-grid2 .article-right h2{
-    color: #794592;
     padding-left: 10px;
 }
 .article-left p {
