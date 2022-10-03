@@ -7,7 +7,7 @@
 
 body{
     font-family: Productsans;
-    font-size: 15px;
+    font-size: 1em;
     margin: 0;
     min-height: 100vh; /*Se estira al maximo del alto de la pantalla (100% view height)*/
     background-image: url("/Icono/Fondo.jpg");
@@ -21,42 +21,36 @@ body{
     display: grid;
     grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr [c5];
     grid-auto-rows: min-content ;
-    grid-gap:30px;
-    margin: 30px 60px;    /*margen del main 30px respecto del header/footer 60px del lateral de la pantalla*/
+    grid-gap: 2em;
+    margin: 2em 4em;    /*margen del main 30px respecto del header/footer 60px del lateral de la pantalla*/
 }
 
 /* H2 titulo de cada pagina */
 .titulo-pagina{
     color: #01140a;
     font-family: Productsans;
-    font-size: 60px;
+    font-size: 4em;
     font-weight: bold;
     text-align: center;
     grid-column-start: c1;
     grid-column-end: c5;
 }
-h2{
-    color: #01140a;
-    font-family: Productsans;
-    font-size: 60px;
-    font-weight: bold;
-    text-align: center;
-    grid-column-start: c1;
-    grid-column-end: c5;
-}
+
 /* H3 titulo de cada seccion */
 .titulo-section{
     color: #01140a;
-    font-size: 25px;
+    font-size: 1.5em;
     font-family: Productsans;
     text-align: center;
+    margin-bottom: 0.5em;
 }
-h3{
+
+/*h3{
     color: #01140a;
-    font-size: 25px;
+    font-size: 1.5em;
     font-family: Productsans;
     text-align: center;
-}
+}*/
 
 /****************************************************HEADER*********************************************************/
 
@@ -67,10 +61,10 @@ h3{
     flex-wrap: wrap;
     background-color: #ededed;
     justify-items: start;
-    padding: 5px;
+    padding: 0.5em 2em;
 }
 .contenedor-nav{
-    font-family: Roboto;
+    font-family: productsans;
     background-color: #ededed;
 }
 .contenedor-nav ul{
@@ -81,24 +75,25 @@ h3{
 }
 .contenedor-nav ul li
 {
-  list-style-type: none;
-  padding: 4px;
-  position: relative;
+    list-style-type: none;
+    padding: 0.25em;
+    position: relative;
+    color:#794592
 } 
 
 .contenedor-nav ul li a
 {
   color: #794592;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 0.25em 0.5em;
 }
 
 .contenedor-nav ul li a:hover
 {
-    border-bottom: 4px solid #794592; 
+    border-bottom: 0.25em solid #794592; 
 }
 .contenedor-nav .dropdown-container :hover{
-    border-bottom: 4px solid #794592;
+    border-bottom: 0.25em solid #794592;
 }
 .contenedor-nav ul li ul
 {
@@ -113,7 +108,7 @@ h3{
   background: #ededed;
   /*border-radius: 6px;*/
   /*width: 100%;*/
-    padding: 10px 2px;
+    padding: 0.5px 0.2em;
   /*box-shadow: 0px 20px 100px 0px rgba(0, 0, 0, 0.5);*/
 }
 @keyframes move {
@@ -121,7 +116,7 @@ h3{
         margin: 0;
     } 
     50%{
-        margin-left: 30%;/*700px;*/
+        margin-left: 30%;
     }
     100%{
         margin: 0;
@@ -137,8 +132,7 @@ h3{
     text-decoration: none;
 }
 header img{
-    height: 50px;
-    /*width: 80px;*/
+    height: 3em;
     align-items: center;
 }
 
@@ -147,7 +141,7 @@ h1{
     background-color: #ededed;
     color:#003d1c;
     font-weight: bold;
-    font-size: 36px;
+    font-size: 2em;
     height: 5%;
     display: inline;
     /*vertical-align: baseline;*/
@@ -157,21 +151,23 @@ h1{
 /*******************************************************PLAGAS***************************************************/
 .section-grid1{
     display: grid;
-    grid-gap:20px;
+    grid-gap:1.5em;
     grid-column-start: c1;
     grid-column-end: c3;
     grid-template-columns: [c1] 1fr [c2] 1fr [c3] ;
-    border:5px solid #b265d6;
-    padding: 20px;
+    border: #b265d6 solid;
+    border-radius: 1em;
+    padding: 1em;
 }
 .section-grid2{
     display: grid;
-    grid-gap:20px;
+    grid-gap:1.5em;
     grid-column-start: c3;
     grid-column-end: c5;
     grid-template-columns: [c1] 1fr [c2] 1fr [c3];
-    border:5px solid #b265d6;
-    padding: 20px;
+    border: #b265d6 solid;
+    border-radius: 1em;
+    padding: 1em;
 }
 .article-left{
     grid-column-start: c1;
@@ -191,6 +187,7 @@ h1{
     width:100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0.5em;
 }
 .article-right{
     grid-column-start: c2;
@@ -207,55 +204,56 @@ h1{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0.5em;
 }
-.section-grid1 .article-left h2{
+/*.section-grid1 .article-left h2{
       padding-left: 10px;
 }
 .section-grid2 .article-right h2{
     padding-left: 10px;
-}
+}*/
 .article-left p {
-    padding: 10px;
+    padding-top: 1em;
 }
 .article-right p {
-    padding: 10px;
+    padding-top: 1em;
 }
 
 /********************************************FOOTER************************************************************/
 
 footer{
     width: 100%;
-    height: 80px;
+    height: 4em;
     background-color: #b265d6;
     display: flex;
     flex-direction: row;
 }
 footer .izquierda{
-    margin-left: 30px;
+    margin-left: 2em;
     align-self: center;
 }
 
 footer .derecha{
-    margin-right: 30px;
+    margin-right: 2em;
     display: inline-flex;
     align-items: center; /*alineacion vertical*/
     margin-left: auto; /*lo posiciona a la derecha del contenedor*/
 }
 footer .texto{
-    margin: 15px 5px;
+    margin: 1em 0.25em;
     color: #01140a;
     font-family: productSans;
-    font-size: 15px;
+    font-size: 1em;
 }
 
 .footer-icono{
-    width: 25px;
-    height: 25px;
+    width: 1.5em;
+    height: 1.5em;
 }
 .container-footer-icono{
-    margin: 0 5px;
-    width: 25px;
-    height: 25px;
+    margin: 0 0.25em;
+    width: 1.5em;
+    height: 1.5em;
 }
 
 /**********************************************************LISTADO********************************************************/
@@ -270,37 +268,38 @@ footer .texto{
 }
 
 .article-listado p{
-    margin-top: 10px;
+    margin-top: 1em;
 }
 
 /* Bloque con texto a la izquierda e imagen a la derecha */
 .listado-izq{
-    grid-column-start: span 2; /*c1;
-    grid-column-end: c3;*/
+    grid-column-start: span 2;
     display: grid;
-    grid-column-gap: 20px;          /* separacion entre texto e imagen */ 
+    grid-column-gap: 1.5em;          /* separacion entre texto e imagen */ 
     grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
     grid-auto-rows: auto;           /* el contenido se ajusta al alto de la fila */
-    padding: 10px;
+    padding: 1em;
     border:#b265d6 solid;
+    border-radius: 1em;
 }
 
 /* Bloque con texto a la derecha e imagen a la izquierda */
 .listado-der{
-    grid-column-start: span 2;/*c3;
-    grid-column-end: c5;*/
+    grid-column-start: span 2;
     display: grid;
-    grid-column-gap: 20px;          /* separacion entre texto e imagen */ 
+    grid-column-gap: 1.5em;          /* separacion entre texto e imagen */ 
     grid-template-columns: 1fr 1fr; /* 2 columnas de igual tamaño */
     grid-auto-rows: auto;           /* el contenido se ajusta al alto de la fila */
-    padding: 10px;
+    padding: 1em;
     border:#b265d6 solid;
+    border-radius: 1em;
 }
 
 .img-listado{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 0.5em;
 }
 
 /*****************************************************CONTACTO************************************************************/
@@ -308,78 +307,102 @@ footer .texto{
 .titulo-pagina-contacto{
     color: #01140a;
     font-family: Productsans;
-    font-size: 60px;
+    font-size: 4em;
     font-weight: bold;
     text-align: center;
     grid-column-start: span 4;
 }
 
-.parrafo-contacto{
-    grid-column-start: span 3;
-    color: #01140a;
-    font-size: 25px;
-    font-family: productsans;
-    text-align: center;
-}
-
-.informacion-contacto{
-    border:#b265d6 solid;
-    border-radius: 1em;
-    padding: 1em;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.informacion-contacto ul{
-    list-style-type: none;
-    list-style-position: outside;
-    justify-content: center;
-    align-items: center;
-}
-
-.informacion-contacto li{
-    display: flex;
-    align-content: center;
-}
 .formulario{
-    grid-column-start: span 3 ;
+    grid-column-start: c1;
+    grid-column-end: c4;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-row-gap: 15px;
+    grid-row-gap: 1em;
     color: #01140a;
     font-family: productsans;
-    font-size: 20px;
+    font-size: 1.5em;
 }
-
 .block{
     grid-column-start: span 2;
-    /*text-align: center;*/
 }
 
 label{
     display: block;
 }
 
+.campos{
+    grid-column-start: span 2;;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 0.5em;
+    grid-column-gap: 2em;
+}
+
+.parrafo-contacto{
+    grid-column-start: span 2;
+    color: #01140a;
+    font-size: 1.5em;
+    font-family: productsans;
+    text-align: center;
+}
+
+#name, #surname, #phone, #email, #message{
+    width: 100%;
+    margin-top: 0.5em;
+}
+
 .formulario button{
+    display: inline-flex;
     font-family: Productsans;
     font-size: 0.8em;
-    font-weight: bold;
-    background-color:#b265d6;
-    color:#01140a;
+    background-color:#003d1c;
+    color:#ededed;
     padding: 0 1.5em;
-    min-width: 50%;
+    margin-top: 2em;
+    grid-column-start: span 2;
+    max-width: 20%;
     border-radius: 1em;
+    align-content: center;
+    justify-content: center;
+}
 
+.boton-enviar{
+    grid-column-start: span 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacion{
+    border:#b265d6 solid;
+    border-radius: 1em;
+    padding: 0.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.parrafo-informacion{
+    font-family: productsans;
+    font-size: 1em;
+}
+
+.informacion li{
+    display: flex;
+    align-content: center;
+}
+
+.mapa{
+    height: 60%;
+    width: 100%;
+    border-radius: 0.5em;
 }
 
 .icono-contacto{
+    margin-right: 0.5em;
     width: 1.3em;
-}
-
-#message{
-    width: 100%;
 }
 
 /***************************************************INDEX*************************************************************/
@@ -397,14 +420,14 @@ label{
     grid-column-start: c1;
     grid-column-end: c5;
     text-align: center;
-    font-size: 20px;
+    font-size: 1.5em;
     margin: 0;
     text-align: justify;
 }
 .section-index .titulo-index{ /*es un h2 pero blanco*/
-    margin: 30px 60px;
+    margin: 0.5em 1em;
     font-family: Productsans;
-    font-size: 60px;
+    font-size: 3em;
     font-weight: bold;
     text-align: center;
     grid-column-start: c1;
@@ -412,8 +435,8 @@ label{
     color:#ededed;
 }
 .section-index article{
-    margin: 30px 60px;
-    padding: 10px;
+    margin: 2em 4em;
+    padding: 0.5em;
 }
 .section-mas-votada{
     grid-column-start: c2;
@@ -421,26 +444,27 @@ label{
     grid-row-start: r2;
     /*grid-row-end: r3;*/
     font-family: Productsans;
-    border:5px solid #003d1c;
-    padding: 20px;
+    border: 5px #003d1c solid;
+    border-radius: 1em;
+    padding: 2em;
 }
 .section-mas-votada img{
     object-fit: cover;
     width: 100%;
     height: 70%;
-    padding: 5px 5px;
+    padding: 0.25em;
 }
 .section-mas-votada article p {
-    padding: 10px;
+    padding: 0.5em;
 }
 .section-mas-votada article a {
     border: #003d1c solid 3px;
     color: #01140a;
     font-weight: bold;
-    padding: 5px;
-   text-decoration: none;
-   position: relative;
-   left:500px;
+    padding: 0.25em;
+    text-decoration: none;
+    position: relative;
+    left:500px;
 }
 
 
