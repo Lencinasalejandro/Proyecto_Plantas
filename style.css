@@ -90,10 +90,12 @@ body{
 
 .contenedor-nav ul li a:hover
 {
-    border-bottom: 0.25em solid #794592; 
+    border-bottom: 4px solid #794592; 
+    border-radius: 0.2em;
 }
 .contenedor-nav .dropdown-container :hover{
-    border-bottom: 0.25em solid #794592;
+    border-bottom: 4px solid #794592;
+    border-radius: 0.2em;
 }
 .contenedor-nav ul li ul
 {
@@ -108,7 +110,8 @@ body{
   background: #ededed;
   /*border-radius: 6px;*/
   /*width: 100%;*/
-    padding: 0.5px 0.2em;
+    /*padding: 10px 2px;*/
+    padding: 0.5em; /*modificado*/
   /*box-shadow: 0px 20px 100px 0px rgba(0, 0, 0, 0.5);*/
 }
 @keyframes move {
@@ -458,7 +461,8 @@ label{
     padding: 0.5em;
 }
 .section-mas-votada article a {
-    border: #003d1c solid 3px;
+    border: #003d1c solid;
+    border-radius: 0.5em;
     color: #01140a;
     font-weight: bold;
     padding: 0.25em;
