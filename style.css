@@ -43,6 +43,13 @@ h3{
     text-align: center;
     margin-bottom: 0.5em;
 }
+h4{
+    color: #01140a;
+    font-size: 1.25em;
+    font-family: Productsans;
+    text-align: center;
+    padding: 0.5em;
+}
 
 /****************************************************HEADER*********************************************************/
 
@@ -130,12 +137,12 @@ h1{
     color:#003d1c;
     font-weight: bold;
     font-size: 2em;
-    height: 5%;
     display: inline;
     align-items: center;
 }   
 
 /*******************************************************PLAGAS***************************************************/
+/* Bloque con texto a la izquierda e imagen a la derecha */
 .section-grid1{
     display: grid;
     grid-gap:1.5em;
@@ -146,6 +153,7 @@ h1{
     border-radius: 1em;
     padding: 1em;
 }
+/* Bloque con texto a la derecha e imagen a la izquierda */
 .section-grid2{
     display: grid;
     grid-gap:1.5em;
@@ -381,14 +389,15 @@ label{
     display: grid;
     grid-template-columns: [c1] 1fr [c2] 1fr [c3] 1fr [c4] 1fr;
     grid-template-rows: [r1]auto [r2]auto [r3]auto;
-    grid-gap:30px;
+    grid-gap:1em;
 }
 .section-index{
     color:#ededed;
-    background-image: url("Imagenes plantas/garden6.png");
+    background-image: url("Imagenes plantas/Flor-Violeta.jpg");
+    background-size: cover;
     width:100%;
     height:100%;
-    object-fit:fill;
+    object-fit:cover;
     grid-column-start: c1;
     grid-column-end: c5;
     text-align: center;
@@ -396,17 +405,13 @@ label{
     margin: 0;
     text-align: justify;
 }
-.section-index h2{ /*es un h2 pero blanco*/
+.section-index article h2{ /*es un h2 pero blanco*/
     margin: 0.5em 1em;
-    font-family: Productsans;
-    font-size: 3em;
-    font-weight: bold;
-    text-align: center;
     grid-column-start: c1;
     grid-column-end: c5; 
     color:#ededed;
 }
-.section-index article{
+.section-index article p {
     margin: 2em 4em;
     padding: 0.5em;
 }
@@ -418,28 +423,41 @@ label{
     border: 5px #003d1c solid;
     border-radius: 1em;
     padding: 2em;
+   display: grid;
+   grid-template-columns: [c1] 1fr [c2] 1fr [c3] auto;
+   grid-template-rows:[r1] auto [r2] auto [r3] auto [r4] auto;
+   grid-gap: 0.5em;
 }
 .section-mas-votada img{
     object-fit: cover;
     width: 100%;
-    height: 70%;
+    height: 100%;
     padding: 0.25em;
+    grid-column-start: span 3;
+
+}
+.section-mas-votada article{
+    grid-column-start: span 3;
+}
+.section-mas-votada h3{
+    grid-column-start: span 3;
+    margin-top: 0.25em;
 }
 .section-mas-votada article p {
     padding: 0.5em;
 }
-.section-mas-votada article a {
+.section-mas-votada .btn-planta-mas-votada{
+    grid-row:r4;
+    grid-column-start: c3;
+}
+.btn-planta-mas-votada a{
     border: #003d1c solid;
     border-radius: 0.5em;
     color: #01140a;
     font-weight: bold;
     padding: 0.25em;
     text-decoration: none;
-    position: relative;
-    left:500px;
 }
-
-
 
 /*******************************************************MEDIA QUERY***************************************************/
 @media (max-width: 1280px) {    /*tablets*/
@@ -456,11 +474,32 @@ label{
     .listado-der{
         grid-column-start: span 4;
     }
+    /* Bloque con texto a la izquierda e imagen a la derecha */
+    .section-grid1{
+        grid-column-start: c1;
+        grid-column-end: c5;
+    }
+    /* Bloque con texto a la derecha e imagen a la izquierda */
+    .section-grid2{
+        grid-column-start: c1;
+        grid-column-end: c5;
+    }
+    @keyframes move {
+        0%{
+            margin: 0;
+        } 
+        50%{
+            margin-left: 20%;
+        }
+        100%{
+            margin: 0;
+        }
+    }
 }
 
 @media (max-width: 768px) {
     h2{
-        font-size: 3em;
+        font-size: 2em;
     }
     /* Bloque con texto a la izquierda e imagen a la derecha */
     .listado-izq{
@@ -480,6 +519,65 @@ label{
     }
     .listado-der .img-listado{
         grid-row:2;
+    }
+    /* Bloque con texto a la izquierda e imagen a la derecha */
+    .section-grid1{
+        grid-column-start: c1;
+        grid-column-end: c5;
+        grid-row-gap:1em;
+        
+    }
+    .section-grid1 .article-left{
+        grid-row:1;
+        grid-column-start: c1;
+        grid-column-end: c3;
+        
+    }
+    .section-grid1 .image-right{
+        grid-row: 2;
+        grid-column-start: c1;
+        grid-column-end: c3;
+    }
+    /* Bloque con texto a la derecha e imagen a la izquierda */
+    .section-grid2{
+        grid-column-start: c1;
+        grid-column-end: c5;
+        grid-row-gap:1em;
+        
+    }
+    .section-grid2 .article-right{
+        grid-row:1;
+        grid-column-start: c1;
+        grid-column-end: c3;
+        
+    }
+    .section-grid2 .image-left{
+        grid-row: 2;
+        grid-column-start: c1;
+        grid-column-end: c3;
+    }
+    .section-index article p{
+        margin: 2em 2em;
+    }
+    .section-mas-votada{
+        grid-column-start: c1;
+        grid-column-end: c5;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    @keyframes move {
+        0%{
+            margin: 0;
+        } 
+        50%{
+            margin-left: 10%;
+        }
+        100%{
+            margin: 0;
+        }
+    }
+    .contenedor-header{
+        flex-direction: column;
     }
     /*resolucion de 320*/
 }
