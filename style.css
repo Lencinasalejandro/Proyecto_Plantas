@@ -206,6 +206,7 @@ footer{
     display: flex;
     flex-direction: row;
 }
+
 footer .izquierda{
     margin-left: 2em;
     align-self: center;
@@ -295,7 +296,7 @@ footer .texto{
     grid-column-start: c1;
     grid-column-end: c4;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-row-gap: 1em;
     color: #01140a;
     font-family: productsans;
@@ -303,6 +304,8 @@ footer .texto{
 }
 .block{
     grid-column-start: span 2;
+    text-align: left;
+    margin-bottom: 0;
 }
 
 label{
@@ -310,7 +313,6 @@ label{
 }
 
 .campos{
-    grid-column-start: span 2;;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-row-gap: 0.5em;
@@ -318,37 +320,36 @@ label{
 }
 
 .parrafo-contacto{
-    grid-column-start: span 2;
     color: #01140a;
     font-size: 1.5em;
     font-family: productsans;
+    font-weight: bold;
     text-align: center;
 }
 
 #name, #surname, #phone, #email, #message{
     width: 100%;
     margin-top: 0.5em;
+    font-family: productsans;
+    font-size: 0.8em;
 }
 
 .formulario button{
     display: inline-flex;
+    justify-content: center;
     font-family: Productsans;
-    font-size: 0.8em;
+    font-size: 1em;
     background-color:#003d1c;
     color:#ededed;
     padding: 0 1.5em;
     margin-top: 2em;
-    grid-column-start: span 2;
-    max-width: 20%;
+    width: 40%;
     border-radius: 1em;
-    align-content: center;
-    justify-content: center;
 }
 
 .boton-enviar{
     grid-column-start: span 2;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
@@ -364,7 +365,7 @@ label{
 
 .parrafo-informacion{
     font-family: productsans;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 .informacion li{
@@ -381,6 +382,11 @@ label{
 .icono-contacto{
     margin-right: 0.5em;
     width: 1.3em;
+}
+
+select{
+    font-family: productsans;
+    font-size: 1em;
 }
 
 /***************************************************INDEX*************************************************************/
@@ -459,14 +465,42 @@ label{
     text-decoration: none;
 }
 
-/*******************************************************MEDIA QUERY***************************************************/
+/***********************************************************************************************************************/
+/*******************************************************MEDIA QUERY 1280************************************************/
+/***********************************************************************************************************************/
+
 @media (max-width: 1280px) {    /*tablets*/
+
+    .grid{
+        grid-gap: 1.5em;
+        margin: 1.5em 3em;
+    }
 
     h2{
         font-size: 3.5em;
     }
-    /* Bloque con texto a la izquierda e imagen a la derecha */
-    .listado-izq{
+
+    h3{
+        font-size: 1.3em;
+    }
+
+   
+    @keyframes move {
+        0%{
+            margin: 0;
+        } 
+        50%{
+            margin-left: 20%;
+        }
+        100%{
+            margin: 0;
+        }
+    }
+
+    /******************************************LISTADO 1280*******************************************/
+
+     /* Bloque con texto a la izquierda e imagen a la derecha */
+     .listado-izq{
         grid-column-start: span 4; 
     }
     
@@ -484,42 +518,89 @@ label{
         grid-column-start: c1;
         grid-column-end: c5;
     }
-    @keyframes move {
-        0%{
-            margin: 0;
-        } 
-        50%{
-            margin-left: 20%;
-        }
-        100%{
-            margin: 0;
-        }
+
+    .article-listado p{
+        font-size: 0.9em;
     }
+
+    .article-listado ul{
+        font-size: 0.9em;
+    }
+
+    /******************************************CONTACTO 1280*******************************************/
+
+    .formulario{
+        grid-column-start: c1;
+        grid-column-end: c5;
+        font-size: 1.2em;
+    }
+
+    .informacion{
+        grid-column-start: span 4;
+        display: grid;
+        grid-template-columns: 1fr 1fr 2fr;
+        column-gap: 1em;
+        justify-items: center;
+    }
+
+    .mapa{
+        min-height: 14em;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.5em;
+    }
+
+    .parrafo-contacto{
+        grid-column-start: span 2;
+        font-size: 1.3em;
+    }
+
+    /***********************************************FOOTER 1280**********************************************/
+
+    footer .izquierda{
+        margin-left: 1.5em;
+    }
+    
+    footer .derecha{
+        margin-right: 1.5em;
+    }
+    
+    footer .texto{
+        font-size: 0.8em;
+    }
+    
+    .footer-icono{
+        width: 1.3em;
+        height: 1.3em;
+    }
+    
+    .container-footer-icono{
+        margin: 0 0.25em;
+        width: 1.3em;
+        height: 1.3em;
+    }
+
 }
 
+/************************************************************************************************************************/
+/*******************************************************MEDIA QUERY 768**************************************************/
+/************************************************************************************************************************/
+
 @media (max-width: 768px) {
+
+    .grid{
+        grid-gap: 1em;
+        margin: 1em 1.5em;
+    }
+
     h2{
         font-size: 2em;
     }
-    /* Bloque con texto a la izquierda e imagen a la derecha */
-    .listado-izq{
-        grid-column-start: span 4; 
-        grid-template-columns: 1fr;
-        grid-row-gap:1em;
+
+    h3{
+        font-size: 1.1em;
     }
-    
-    /* Bloque con texto a la derecha e imagen a la izquierda */
-    .listado-der{
-        grid-column-start: span 4;
-        grid-template-columns: 1fr;
-        grid-row-gap:1em;
-    }
-    .listado-der .article-listado{
-        grid-row:1;
-    }
-    .listado-der .img-listado{
-        grid-row:2;
-    }
+
     /* Bloque con texto a la izquierda e imagen a la derecha */
     .section-grid1{
         grid-column-start: c1;
@@ -579,5 +660,96 @@ label{
     .contenedor-header{
         flex-direction: column;
     }
+
+    /******************************************LISTADO 768*******************************************/
+
+    /* Bloque con texto a la izquierda e imagen a la derecha */
+    .listado-izq{
+        grid-column-start: span 4; 
+        grid-template-columns: 1fr;
+        grid-row-gap:1em;
+    }
+    
+    /* Bloque con texto a la derecha e imagen a la izquierda */
+    .listado-der{
+        grid-column-start: span 4;
+        grid-template-columns: 1fr;
+        grid-row-gap:1em;
+    }
+
+    .listado-der .article-listado{
+        grid-row:1;
+    }
+
+    .listado-der .img-listado{
+        grid-row:2;
+    }
+
+    .article-listado p{
+        font-size: 0.8em;
+    }
+
+    .article-listado ul{
+        font-size: 0.8em;
+    }
+
+    /******************************************CONTACTO 768*******************************************/
+
+    .formulario{
+        grid-template-columns: 1fr;
+        font-size: 1em;
+    }
+
+    .informacion{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 1em;
+        justify-items: center;
+        font-size: 0.8em;
+    }
+
+    .parrafo-contacto{
+        font-size: 1.1em;
+    }
+
+    .campos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-row-gap: 0.5em;
+    }
+
+    .block{
+        grid-column-start: span 1;
+    }
+
+    .boton-enviar{
+        grid-column-start: span 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /***********************************************FOOTER 768**********************************************/
+
+    footer{
+        height: auto;
+        flex-direction:column;
+    }
+
+    footer .izquierda{
+        margin-left: 0;
+    }
+    
+    footer .derecha{
+        justify-content: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    footer .texto{
+        margin: 0.7em 0.25em;
+        font-size: 0.7em;
+    }
+
     /*resolucion de 320*/
 }
