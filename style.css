@@ -407,7 +407,6 @@ select{
     grid-column-start: c1;
     grid-column-end: c5;
     text-align: center;
-    font-size: 1.5em;
     margin: 0;
     text-align: justify;
 }
@@ -420,6 +419,7 @@ select{
 .section-index article p {
     margin: 2em 4em;
     padding: 0.5em;
+    font-size: 1.5em;
 }
 .section-mas-votada{
     grid-column-start: c2;
@@ -451,10 +451,12 @@ select{
 }
 .section-mas-votada article p {
     padding: 0.5em;
+    font-size: 1.2em;
 }
 .section-mas-votada .btn-planta-mas-votada{
     grid-row:r4;
     grid-column-start: c3;
+    font-size: 1.2em;
 }
 .btn-planta-mas-votada a{
     border: #003d1c solid;
@@ -496,8 +498,19 @@ select{
             margin: 0;
         }
     }
+    .section-mas-votada article p{
+        font-size: 1em;
+    }
+    .section-index article p{
+        font-size: 1.2em;
+        margin: 2em 4em;
+        padding: 0.5em;
+    }
+    .section-mas-votada .btn-planta-mas-votada{
+      font-size: 1em;
+    }
 
-    /******************************************LISTADO 1280*******************************************/
+    /******************************************LISTADO  y PLAGAS 1280*******************************************/
 
      /* Bloque con texto a la izquierda e imagen a la derecha */
      .listado-izq{
@@ -524,6 +537,12 @@ select{
     }
 
     .article-listado ul{
+        font-size: 0.9em;
+    }
+    .article-left p{
+        font-size: 0.9em;
+    }
+    .article-right p{
         font-size: 0.9em;
     }
 
@@ -600,6 +619,38 @@ select{
     h3{
         font-size: 1.1em;
     }
+    @keyframes move {
+        0%{
+            margin: 0;
+        } 
+        50%{
+            margin-left: 10%;
+        }
+        100%{
+            margin: 0;
+        }
+    }
+    .contenedor-header{
+        flex-direction: column;
+    }
+    .section-mas-votada{
+        grid-column-start: c1;
+        grid-column-end: c5;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    .section-mas-votada article p{
+        font-size: 0.8em;
+    }
+    .section-index article p{
+        margin: 2em 2em;
+        font-size: 0.9em;
+    }
+    .section-mas-votada .btn-planta-mas-votada{
+        font-size: 0.8em;
+      }
+  
+    /****************************************************PLAGAS 768*******************************************/
 
     /* Bloque con texto a la izquierda e imagen a la derecha */
     .section-grid1{
@@ -613,6 +664,9 @@ select{
         grid-column-start: c1;
         grid-column-end: c3;
         
+    }
+    .article-left p {
+        font-size: 0.8em;
     }
     .section-grid1 .image-right{
         grid-row: 2;
@@ -632,34 +686,15 @@ select{
         grid-column-end: c3;
         
     }
+    .article-right p {
+        font-size: 0.8em;
+    }
     .section-grid2 .image-left{
         grid-row: 2;
         grid-column-start: c1;
         grid-column-end: c3;
     }
-    .section-index article p{
-        margin: 2em 2em;
-    }
-    .section-mas-votada{
-        grid-column-start: c1;
-        grid-column-end: c5;
-        margin-right: 1em;
-        margin-left: 1em;
-    }
-    @keyframes move {
-        0%{
-            margin: 0;
-        } 
-        50%{
-            margin-left: 10%;
-        }
-        100%{
-            margin: 0;
-        }
-    }
-    .contenedor-header{
-        flex-direction: column;
-    }
+   
 
     /******************************************LISTADO 768*******************************************/
 
@@ -751,5 +786,5 @@ select{
         font-size: 0.7em;
     }
 
-    /*resolucion de 320*/
+
 }
