@@ -9,7 +9,7 @@ body{
     font-size: 1em;
     margin: 0;
     min-height: 100vh; /*Se estira al maximo del alto de la pantalla (100% view height)*/
-    background-image: url("/Icono/Fondo.jpg");
+    background-image: url("Icono/Fondo.jpg");
     display: grid;
     grid-template-rows: auto 1fr auto;
     /*3 filas header y footer se ajustan al contenido (auto) y body toma el resto (1fr)*/
