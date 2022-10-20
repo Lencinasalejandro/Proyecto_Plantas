@@ -506,7 +506,7 @@ select{
         margin: 2em 4em;
         padding: 0.5em;
     }
-    .section-mas-votada .btn-planta-mas-votada{
+    .btn-planta-mas-votada a{
       font-size: 1em;
     }
 
@@ -646,7 +646,7 @@ select{
         margin: 2em 2em;
         font-size: 0.9em;
     }
-    .section-mas-votada .btn-planta-mas-votada{
+    .btn-planta-mas-votada a{
         font-size: 0.8em;
       }
   
