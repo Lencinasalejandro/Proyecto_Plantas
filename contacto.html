@@ -5,37 +5,36 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Giardino</title>
-    <link rel="stylesheet" href="/style.css">
-    <link rel="stylesheet" href="/fuentes.css">
-    <link rel="icon" href="/Icono/Icono sonrisa.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fuentes.css">
+    <link rel="icon" href="Icono/Icono sonrisa.svg">
 </head>
 <body>
     <header class="contenedor-header">
         
-            <a href="/index.html" class="icono-y-titulo">
-                <img src="icono/Icono libro.svg" alt="icono"> 
+            <a href="index.html" class="icono-y-titulo">
+                <img src="Icono/Icono libro.svg" alt="icono"> 
                 <h1>Giardino</h1>
             </a>
         
-        
-        <nav class="contenedor-nav" >
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li class="dropdown-container">
-                    <li>Listado</a>
-                        <ul>
-                            <li><a href="/aromaticas.html">Aromáticas</a></li>
-                            <li><a href="/florales.html">Florales</a> </li> 
-                            <li><a href="/frutales.html">Frutales</a> </li>
-                            <li><a href="/suculentas.html">Suculentas</a> </li>
-                            <li><a href="/vegetales.html">Vegetales</a> </li>  
-                        </ul>
+            <nav class="contenedor-nav" >
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown-container">
+                        <li>Listado</a>
+                            <ul>
+                                <li><a href="aromaticas.html">Aromáticas</a></li>
+                                <li><a href="florales.html">Florales</a> </li> 
+                                <li><a href="frutales.html">Frutales</a> </li>
+                                <li><a href="suculentas.html">Suculentas</a> </li>
+                                <li><a href="vegetales.html">Vegetales</a> </li>  
+                            </ul>
+                        </li>
                     </li>
-                </li>
-                <li><a href="/plagas.html">Plagas</a></li>
-                <li><a href="/contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
+                    <li><a href="plagas.html">Plagas</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
     </header>
 
     <main class="grid">
@@ -44,30 +43,31 @@
         
         <section class="formulario">
             <p class="parrafo-contacto">
-                ¿Queres contactarte con nosotros? Completá con tus datos y dejanos un mensaje.    
+                Completá con tus datos y dejanos un mensaje.    
            </p>
 
            <form action="" class="campos">
                 <label>
-                    Nombre <br>
-                    <input type="text" id="name" name="Nombre">
+                    Nombre (*)<br>
+                    <input type="text" id="name" name="Nombre" required>
                 </label>
                 <label>
                     Apellido <br>
                     <input type="text" id="surname" name="Apellido">
                 </label>
                 <label>
-                    Email <br>
-                    <input type="email" id="email" name="Email">
+                    Email (*)<br>
+                    <input type="email" id="email" name="Email" required>
                 </label>
                 <label>
                     Teléfono <br>
                     <input type="tel" id="phone" name="Teléfono">
                 </label>
                 <label class="block">
-                    Mensaje <br>
-                    <textarea name="Mensaje" id="message" rows="3"></textarea>
+                    Mensaje (*)<br>
+                    <textarea name="Mensaje" id="message" rows="3" required></textarea>
                 </label>
+                <p>(*) Campos obligatorios</p>
 
                 <h3 class="block">¿Que tipo de plantas te gustan más?</h3>
 
@@ -152,10 +152,10 @@
         </div>
         <div class="derecha">
             <h6 class="texto"> Buscanos en </h6>
-            <a target="_blank" href="https://es-la.facebook.com/" class="container-footer-icono"><img src="/Icono/Icono-facebook 02.svg" alt="Facebook" class="footer-icono"></a>
-            <a target="_blank" href="https://www.instagram.com/" class="container-footer-icono"><img src="/Icono/Icono-instagram 02.svg" alt="Instagram" class="footer-icono"></a>
-            <a target="_blank" href="https://twitter.com/?lang=es" class="container-footer-icono"><img src="/Icono/Icono-twitter 02.svg" alt="Twitter" class="footer-icono"></a>
-            <a target="_blank" href="https://www.whatsapp.com/?lang=es" class="container-footer-icono"><img src="/Icono/Icono-whatsapp 02.svg" alt="Whatsapp" class="footer-icono"></a>
+            <a target="_blank" href="https://es-la.facebook.com/" class="container-footer-icono"><img src="Icono/Icono-facebook 02.svg" alt="Facebook" class="footer-icono"></a>
+            <a target="_blank" href="https://www.instagram.com/" class="container-footer-icono"><img src="Icono/Icono-instagram 02.svg" alt="Instagram" class="footer-icono"></a>
+            <a target="_blank" href="https://twitter.com/?lang=es" class="container-footer-icono"><img src="Icono/Icono-twitter 02.svg" alt="Twitter" class="footer-icono"></a>
+            <a target="_blank" href="https://www.whatsapp.com/?lang=es" class="container-footer-icono"><img src="Icono/Icono-whatsapp 02.svg" alt="Whatsapp" class="footer-icono"></a>
         </div>
     </footer>
 </body>
