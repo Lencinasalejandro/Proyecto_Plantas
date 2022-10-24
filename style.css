@@ -361,6 +361,8 @@ label{
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    grid-column-start: c4;
+    grid-row-start: r1;
 }
 
 .parrafo-informacion{
@@ -389,6 +391,17 @@ select{
     font-size: 1em;
 }
 
+.contadorVisitas{
+    grid-column-start: c2;
+    grid-column-end: c4;
+    color: #01140a;
+    font-family: productsans;
+    font-size: 1.5em;
+}
+#visitas{
+    font-size: 2em;
+    color: #794592;
+}
 /***************************************************INDEX*************************************************************/
 /* grilla del main */
 .grid-index{
@@ -456,17 +469,17 @@ select{
 .section-mas-votada .btn-planta-mas-votada{
     grid-row:r4;
     grid-column-start: c3;
-    font-size: 1.2em;
 }
-.btn-planta-mas-votada a{
-    border: #003d1c solid;
-    border-radius: 0.5em;
-    color: #01140a;
-    font-weight: bold;
-    padding: 0.25em;
+.btn-planta-mas-votada a{  
+    font-family: Productsans;
+    font-size: 1em;
+    background-color:#003d1c;
+    color:#ededed;
+    padding: 0 1.5em;
+    margin-top: 2em;
     text-decoration: none;
+    border-radius: 1em;
 }
-
 /***********************************************************************************************************************/
 /*******************************************************MEDIA QUERY 1280************************************************/
 /***********************************************************************************************************************/
@@ -572,6 +585,13 @@ select{
     .parrafo-contacto{
         grid-column-start: span 2;
         font-size: 1.3em;
+    }
+
+    .contadorVisitas{
+        font-size: 1em;
+    }
+    #visitas{
+        font-size: 1.5em;
     }
 
     /***********************************************FOOTER 1280**********************************************/
@@ -762,6 +782,13 @@ select{
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+    .contadorVisitas{
+        font-size: 0.8em;
+        grid-column-end: span 3;
+    }
+    #visitas{
+        font-size: 1.3em;
     }
 
     /***********************************************FOOTER 768**********************************************/
