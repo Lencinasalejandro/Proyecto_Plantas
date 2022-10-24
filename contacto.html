@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="fuentes.css">
     <link rel="icon" href="Icono/Icono sonrisa.svg">
+    <script src="Js/funciones.js"></script>
 </head>
 <body>
     <header class="contenedor-header">
@@ -46,7 +47,7 @@
                 Completá con tus datos y dejanos un mensaje.    
            </p>
 
-           <form action="" class="campos">
+           <form action="" class="campos" name="formulario">
                 <label>
                     Nombre (*)<br>
                     <input type="text" id="name" name="Nombre" required>
@@ -65,7 +66,7 @@
                 </label>
                 <label class="block">
                     Mensaje (*)<br>
-                    <textarea name="Mensaje" id="message" rows="3" required></textarea>
+                    <textarea id="message" name="Mensaje" rows="3" required></textarea>
                 </label>
                 <p>(*) Campos obligatorios</p>
 
@@ -111,7 +112,7 @@
                 </select>
                 
                 <p class="boton-enviar">
-                    <button type="submit">
+                    <button type="submit" onclick="validarEnviar()">
                         Enviar
                     </button>
                 </p>
